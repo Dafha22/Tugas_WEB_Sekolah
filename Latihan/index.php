@@ -28,8 +28,8 @@
 
             <div class="m-2">
                 <label class="form-label m-0" for="">Kelas :</label>
-                <select name="kelas" id="kelas" class="form-control" placeholder="Pilih Kelas">
-                    <option value="">Pilih Kelas</option>
+                <select name="kelas" id="kelas" class="form-select border-dark" placeholder="Pilih Kelas">
+                    <option value="0">Pilih Kelas</option>
                     <option value="XII RPL-1">XII RPL 1</option>
                     <option value="XII RPL-2">XII RPL 2</option>
                     <option value="XII RPL-3">XII RPL 3</option>
