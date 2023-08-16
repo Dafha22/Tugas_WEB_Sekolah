@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
+    
         $nis = $_GET['nis'];
         $nama = $_GET['nama'];
         $kelas = $_GET['kelas'];
@@ -26,7 +27,7 @@
                 <div class="mb-2">
                     <div>NIS :</div>
                     <div class="container border border-1 border-black"><b><?php echo $nis ?></b></div>
-                    <input type="hidden " name="nis" value="<?php echo $nis; ?>">
+                    <input type="hidden" name="nis" value="<?php echo $nis; ?>">
                 </div>
 
                 <div class="mb-2">
@@ -44,10 +45,7 @@
             </div>
             <hr class="border border-2 border-danger">
             
-                 
-                
-                
-        
+            
             <div id="isi" class="container">
 
                 <div class="h5">masukan nilai</div>
@@ -82,9 +80,6 @@
                 </div>
             </div>
         </div>
-    </form>
-    
-
-    
+    </form>  
 </body>
 </html>
