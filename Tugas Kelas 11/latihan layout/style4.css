@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    font: 100% Courier New;
+    margin: 20px; 
+    line-height: 22px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+#top {
+    color: chartreuse;
+    padding: 10px;
+
+}
+
+#menubar {
+    color: chartreuse;
+    padding: 10px;
+}
+
+#main {
+    color: chartreuse;
+}
+
+#sidebar {
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    width: 320px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: small;
+    line-height: 20px;
+}
+
+#bottom {
+    color: white;
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+    font-size: small;
+}  
+
+#main p a {
+    text-decoration: none;
+}
+
+
+#top h1, #top p {
+    margin: 0;
+}
+
+#menubar #menulist li a {
+    color: chartreuse;
+}
+
+#menubar #menulist li a:link {
+    text-decoration: none;
+}
+
+#menubar #menulist li a:visited {
+    text-decoration: none;
+}
+
+#menubar #menulist li a:hover {
+    color: white;
+}
+
+#main p a {
+    color: white;
+}
+
+#main p a:hover {
+    color: chartreuse;
+}
