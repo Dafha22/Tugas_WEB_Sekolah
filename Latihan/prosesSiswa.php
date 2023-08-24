@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    
+
+        //VALIDASI MENGGUNAKAN isset() dan empty()
+
+        // if(isset($_GET['nis']) && empty($_GET['nis']) ){
+
+        // }
+
+        
+        
+        if(empty($_GET['nis']) ){
+            die('Nis kosong... isi dong! <a href="#" onclick="return history.back(0)">Kembali</a>');
+        }
+        if(empty($_GET['nama']) ){
+            die('Nama kosong... isi dong! <a href="#" onclick="return history.back(0)">Kembali</a>');
+        }
+        if(empty($_GET['kelas']) ){
+            die('Kelas kosong... isi dong! <a href="#" onclick="return history.back(0)">Kembali</a>');
+        }
+
         $nis = $_GET['nis'];
         $nama = $_GET['nama'];
         $kelas = $_GET['kelas'];
@@ -52,7 +70,7 @@
 
                 <div class="mb-2">
                     <label for="">Jml. Kehadiran</label>
-                    <input class="form-control" type="number" name="kehadiran" placeholder="isi nilai kehadiran....">
+                    <input class="form-control" type="number" name="kehadiran"max="14 placeholder="isi nilai kehadiran....">
                 </div>
 
                 <div class="mb-2">
