@@ -14,8 +14,8 @@
     $database = "vokasi" ;
 
 
-    error_reporting(0);
-    mysqli_report(MYSQLI_REPORT_OFF);
+    //error_reporting(0);
+    //mysqli_report(MYSQLI_REPORT_OFF);
     
     $conn = mysqli_connect($hostname,$username,$password,$database);
 
