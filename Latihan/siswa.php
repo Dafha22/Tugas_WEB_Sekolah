@@ -31,6 +31,7 @@
         $nilaiuts = $_POST['uts'];    
         $nilaiuas = $_POST['uas'];
 
+        $nilaiakhir = (($nilaikehadiran/14)*5)+($nilaitugas*0.15)+($nilaiformatif*0.1)+($nilaiuts*0.3)+($nilaiuas*0.4);
         // Blok query dan simpan data
 
         $sql = "INSERT INTO 
@@ -59,9 +60,7 @@
         $hasil = mysqli_query($conn, $sql);
 
         if(!$hasil){
-            // echo "data sudah masuk! <a href='index.php'>Kembali</a>";
-        }else {
-            die("<br>proses simpan eror! nih erornya : ".mysqli_error($conn));
+            die("<br>proses simpan eror! nih erornya : ".mysqli_error ($conn));
         }
 
         //melakukan pencarian data
@@ -155,10 +154,13 @@
 </head>
 <body>
     <center>
-        <div class="alert alert-success w-25 mx-auto">Data Berhasil Di input <a href="index.php" class="btn btn-warning">Kembali</a></div>
+        <div class="alert alert-success w-25 mx-auto h4">Data Berhasil Di input <br> 
+            <a href="index.php" class="btn btn-primary me-md-2 mt-2">Kembali</a>
+            <a href="viewdata.php" class="btn btn-primary mt-2">View data</a>
+        </div>
         <main>
             <h1>Menghitung Nilai Mahasiswa</h1>
-            <table border="0" width="400" style="margin-top: 30px;" cellspacing="0" cellspading="2">
+            <table border="0" width="400" style="margin-top: 0px;" cellspacing="0" cellspading="2">
                 <tr>
                     <td>NIS</td>
                     <td>:</td>
@@ -206,12 +208,20 @@
                 <tr style="background-color: skyblue;">
                     <td>Nilai Akhir</td>
                     <td>:</td>
-                    <td><?php echo number_format($row['nilai_akhir'],2)?></td>
+                    <td><?php echo "".number_format($nilaiakhir,2).""; ?></td>
                     
                 </tr>
                 
             </table>
+            <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="" class="btn btn-primary me-md-2" type="button">Kembali</a>
+                <a href="" class="btn btn-primary" type="button">View data</a>
+            </div> -->
         </main>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            
+        </div>
     </center>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </html>
